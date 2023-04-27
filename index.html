@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/docs/images/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="pokemon_ask">
+        <form>
+          <div class="form_control">
+            <label for="">Pokemon</label>
+            <input type="text" name="Pokemon">
+            <p class="form_description">Mete tu pokemon</p>
+          </div>
+          <div class="form_control_buttons">
+            <button type="submit">Busca</button>
+            <button type="reset">Resetea</button>
+          </div>
+        </form>
+        <div class="pokemon_response">
+          <div class="pokemon_response_name">name</div>
+          <div class="pokemon_response_picture">
+            <img src="" alt="">
+          </div>
+          <div class="pokemon_response_abilities"></div>
+        </div>
+        <div class="pokemon_error"></div>
+        <div class="loading hidden">
+          loading
+        </div>
+      </div>
+    </div>
+
+  
+    <script type="module" src="/app/main.js"></script>
+  </body>
+</html>
