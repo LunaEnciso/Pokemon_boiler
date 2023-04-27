@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+ // @apply border border-pink-500;
+}
+
+.pokemon_ask{
+  @apply container mx-auto;
+  form{
+    @apply flex flex-col gap-4 ;
+    @apply max-w-[600px] mx-auto my-4 p-8 bg-slate-200;
+    .form_control{
+      @apply flex flex-col gap-4 ;
+      label{
+        @apply font-bold;
+      }
+      input{
+        @apply input input-bordered input-secondary w-full ;
+      }
+      
+    }
+    .form_control_buttons{
+      @apply flex gap-4 ;
+      button{
+        @apply btn btn-secondary;
+        &[type="reset"]{
+          @apply  btn-outline ;
+        }
+
+       }
+ 
+    }
+  }
+  .pokemon_response{
+   @apply card card-compact w-96 bg-base-100 shadow-xl justify-center  ;
+   @apply flex gap-4 items-center ;
+   @apply container mx-auto; 
+   @apply max-w-[300px] mx-auto my-4 p-8 bg-slate-200;
+   background-color: rgba(255, 221, 232, 0.799);
+   position: center;
+   border: dashed;
+   border-color: rgb(255, 0, 76);
+   border-radius: 55px;
+
+   .pokemon_response_name {
+    font-size: 30px ;
+    font-weight: 500;
+    font-variant: small-caps;
+    text-decoration: underline;
+
+    .pokemon_response_picture {
+      @apply w-24 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2 ;
+      background-color: rgb(208, 42, 42);
+
+      
+    }
+    .pokemon_response_abilities {
+      @apply bg-slate-200;
+    }
+
+    
+   }
+  }
+  .pokemon_error{}
+}
+
+.loading {
+  @apply fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 text-white ;
+  @apply hidden ;
+  &.opened {
+    @apply flex ;
+  }
+}
+
+img{
+  background-color: white;
+  border-radius: 20px;
+  border: dashed;
+}
